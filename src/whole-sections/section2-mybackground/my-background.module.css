@@ -1,0 +1,31 @@
+.maindiv {
+  position: relative;
+  z-index: 2;
+}
+.part_one {
+  background-color: var(--main-background-color-dark);
+  color: var(--main-font-color-white);
+  text-align: center;
+  padding: 5rem;
+  border-radius: 20px;
+  padding-bottom: 15rem;
+}
+.part_one h1 {
+  margin-bottom: 4rem;
+}
+
+.part_two {
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(144, 144, 144, 0.763);
+  margin: -10rem auto 0 auto;
+  text-align: center;
+  padding: 4rem;
+  width: 85%;
+  border-radius: 20px;
+  padding-bottom: 10rem;
+  z-index: 2;
+}
+
+.part_two h2 {
+  margin-bottom: 4rem;
+}

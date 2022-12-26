@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Introduce from "./whole-sections/section1-introduction/introduce";
+import MyBackgorund from "./whole-sections/section2-mybackground/my-background";
+import MySkill from "./whole-sections/section3-myskill/my-skill";
+import Studies from "./whole-sections/section4-study/study";
+import Projects from "./whole-sections/section5-project/projects";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <Introduce />
+      </div>
+      <div>
+        <MyBackgorund />
+      </div>
+      <div>
+        <MySkill />
+      </div>
+      <div>
+        <Studies />
+      </div>
+      <div>
+        <Projects />
+      </div>
     </div>
   );
 }

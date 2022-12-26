@@ -1,0 +1,63 @@
+.maindiv {
+  z-index: 5;
+  position: absolute;
+  left: 0;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  margin-top: -15rem;
+  background-color: gray;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.maindiv h4 {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 2rem;
+}
+
+.maindiv img {
+  width: 80%;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+.entering {
+  opacity: 0.7;
+  transition: all 300ms ease-in;
+}
+
+.entered {
+  animation: popup 200ms ease-in-out;
+}
+.exiting {
+  opacity: 0.7;
+  transition: all 200ms ease-in;
+}
+.exited {
+  opacity: 0;
+  animation: unpopup 200ms ease-in-out;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes unpopup {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
