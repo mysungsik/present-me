@@ -4,6 +4,9 @@ html {
   --main-background-color: rgb(161, 177, 251);
   --main-background-color-dark: rgb(139, 30, 223);
   --main-font-color-white: white;
+
+  --greeting-backround-color-lighter: rgb(63, 63, 188);
+  --greeting-backround-color: rgb(81, 81, 162);
 }
 body {
   margin: 0;
@@ -17,4 +20,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.main-content-text {
+  animation: popup 700ms ease-out;
+}
+@keyframes popup {
+  0% {
+    margin-top: 100rem;
+  }
+  100% {
+    margin-top: 0;
+  }
 }

@@ -9,8 +9,17 @@ import nodejs from "../../skills-svg/nodedotjs.svg";
 import react from "../../skills-svg/react.svg";
 import redux from "../../skills-svg/redux.svg";
 import typescript from "../../skills-svg/typescript.svg";
+import firebase from "../../skills-svg/firebase.svg";
+import SkillDescription from "./skill-description";
+import { useState } from "react";
+import { Transition } from "react-transition-group";
 
 const MySkill = () => {
+  const [javaState, setJavaState] = useState<boolean>(false);
+
+  const toggleState = () => {
+    setJavaState((prev) => !prev);
+  };
   return (
     <div className={styles.maindiv}>
       <h1>보유한 능력들</h1>
@@ -19,9 +28,20 @@ const MySkill = () => {
           <h3> 프론트엔드 </h3>
           <hr />
           <div className={styles.card_svgs}>
-            <div>
+            <div onClick={toggleState}>
               <img src={javascript} alt={"javascript"} />
               <p>자바스크립트</p>
+              <Transition in={javaState} timeout={200}>
+                {(state) => (
+                  <SkillDescription
+                    desc={"React Router 를 활용한 라우팅 리액트"}
+                    desc2={"리액트다이놈아"}
+                    desc3={"리액트삼이다!"}
+                    state={state}
+                    toggleState={toggleState}
+                  />
+                )}
+              </Transition>
             </div>
             <div>
               <img src={react} alt={"react"} />
@@ -33,7 +53,7 @@ const MySkill = () => {
             </div>
             <div>
               <img src={nextjs} alt={"nextjs"} />
-              <p>리액트</p>
+              <p>넥스트JS</p>
             </div>
             <div>
               <img src={redux} alt={"redux"} />
@@ -70,6 +90,10 @@ const MySkill = () => {
             <div>
               <img src={nodejs} alt={"nodejs"} />
               <p>Nodejs</p>
+            </div>
+            <div>
+              <img src={firebase} alt={"firebase"} />
+              <p>FireBase</p>
             </div>
           </div>
         </div>

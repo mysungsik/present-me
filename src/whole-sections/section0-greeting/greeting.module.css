@@ -1,0 +1,66 @@
+.maindiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 10;
+  background: linear-gradient(
+    to top,
+    var(--greeting-backround-color),
+    var(--greeting-backround-color-lighter)
+  );
+  color: white;
+}
+.main_content {
+  margin-top: 10%;
+}
+
+.imgOn {
+  width: 10rem;
+  height: 10rem;
+  background-color: antiquewhite;
+  color: black;
+  background-image: url("/public/images/introduce/icons8-user-100.png");
+}
+.imgOff {
+  width: 10rem;
+  height: 10rem;
+  background-color: antiquewhite;
+  color: black;
+  background-image: none;
+}
+
+.down_arrow {
+  position: absolute;
+  bottom: 5rem;
+  width: 14rem;
+  left: calc(50% - 7rem);
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  animation: bump infinite 1500ms ease-in-out;
+}
+
+.entered {
+  margin-top: 0;
+}
+.exiting {
+  margin: 0;
+}
+.exited {
+  margin-top: -100rem;
+  transition: all 500ms ease-in-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}

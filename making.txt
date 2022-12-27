@@ -9,4 +9,84 @@
     npm install react-transition-group --save
     npm i --save-dev @types/react-transition-group // 이게 타입스크립트꺼인듯
 
-4. 
+
+[추가작업할것]
+
+0. 메인 화면 만들기 [ 디자인 수정하기 ]
+1. 버튼 호버
+2. skill 들 호버
+3. 프로젝트 배포 사이트, 주소 넣기
+4. 기타 등등... 디자인 수정
+5. 기술 호버하면, 내 능력 나오게하기 [ 코드 생각좀 해보자, 너무 더럽다, 어딘가 깔끔하게 만들 수 있을거야...]
+
+
+[다시 알아낸것들]
+
+1. 타입스크립트에서, 함수를 넘기면, 하위 컴포넌트에서 사용할때, 리스너를 달것이라면, onClick(()=>함수이름) 으로 사용할것.
+2. ? 를 달아놓으면, 혹시 있을 경우, 값을 넣을 수 있다.
+
+    const SkillDescription: React.FC<{
+        desc: string;
+        desc2?: string;
+
+        const { desc, desc2, desc3, desc4, state, toggleState } = props;
+
+    desc2, 3 ... 는 있으면 있고, 없어도 괜찮아진다.
+
+3. 눌렀을때, 싹 바뀌게 하려면
+
+    1) 일단 컴포넌트에 글을 싹 다 적는다,
+    2) 클래스에, 백그라운드 이미지를 설정한다.
+    3) 버튼을 누르면 클래스 이름이 변경되고, 그 클래스 이름은 백그라운드 이미지가 없는 클래스 이름이게 만든다.
+
+            const [imgOn, setImgOn] = useState<boolean>(true);
+
+            const Component = ()=> {
+                    ...
+                const changeStyle = () => {
+                    setImgOn((prev) => !prev);
+                };
+                    let msStyle;
+                
+                if (imgOn) {
+                    msStyle = styles.imgOn;
+                } else {
+                    msStyle = styles.imgOff;
+                }
+
+                return (
+                    ...
+                    <div className={msStyle} onClick={changeStyle}>
+
+4. 부드럽게 움직이는 트랜지션
+        .entering {
+            opacity: 0;
+        }
+        .entered {
+            animation: popup 400ms ease-out;
+        }
+        .exiting {
+            animation: unpopup 400ms ease-out;
+        }
+        .exited {
+            opacity: 0;
+        }
+        
+        @keyframes popup {
+            0% {
+            opacity: 0;
+            }
+            100% {
+            opacity: 1;
+            }
+        }
+        
+        @keyframes unpopup {
+            0% {
+            opacity: 1;
+            }
+            100% {
+            opacity: 0;
+            }
+        }
+        

@@ -33,7 +33,7 @@ const Projects = () => {
             <p> 먹은 칼로리를 계산해 드립니다.</p>
             <button onClick={popupProject1}>자세히 보기</button>
           </div>
-          <Transition in={project1} timeout={200} unmountOnExit mountOnEnter>
+          <Transition in={project1} timeout={300} unmountOnExit mountOnEnter>
             {(state) => <Project1 state={state} popupProject={popupProject1} />}
           </Transition>
         </li>
