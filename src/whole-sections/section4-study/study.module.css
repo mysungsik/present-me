@@ -1,8 +1,26 @@
 .maindiv {
   text-align: center;
+  margin: 0 auto;
   padding: 3rem 0;
 }
 
 .maindiv h1 {
   margin-bottom: 4rem;
+}
+
+.study_detail {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.study_detail div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.study_detail p {
+  width: 70%;
+}
+.writer {
+  width: 30%;
 }

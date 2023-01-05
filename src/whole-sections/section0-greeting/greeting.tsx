@@ -11,7 +11,7 @@ const Greeting: React.FC<{ showOthers: () => void; state: string }> = (
       <div className={styles.main_content}>
         <div className={styles.main_content_text}>
           <h1> 안녕하세요, </h1>
-          <h1> 프론트엔드 개발자 </h1>
+          <h1> 신입 프론트엔드 개발자 </h1>
           <h1> 최명식 입니다</h1>
           <h1> 방문해 주셔서 감사합니다</h1>
         </div>

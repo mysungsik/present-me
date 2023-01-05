@@ -1,3 +1,4 @@
+/* 전체 div */
 .maindiv {
   text-align: center;
   background-color: var(--main-background-color-dark);
@@ -7,13 +8,18 @@
   margin-top: -5rem;
   z-index: 0;
 }
+/* 보유한 능력들 */
 .maindiv h1 {
   margin-bottom: 4rem;
 }
+
+/* 세가지 파트가 전부 담긴 메인 카드 div */
 .cards {
   display: flex;
   justify-content: center;
 }
+
+/* 세가지중 각 파트 의 전체 DIV */
 .card {
   margin: 0 2rem;
   width: 15rem;
@@ -23,21 +29,34 @@
   border-radius: 20px;
 }
 
-.card img {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 5px;
-  display: inline-block;
-  margin: 0.5rem auto;
-}
+/* 파트 안의 각 li DIV */
 .card_svgs div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 
+/* 파트 안의 img 파일 (기술 스택 이미지) */
+.card img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0.5rem auto;
+  transition: all 200ms ease-out;
+}
+
+/* 파트 안의 img 파일 (기술 스택 이미지) */
+.card img:hover {
+  transform: scale(1.1);
+}
+
+/* 파트 안의 TEXT (기술 스택 이름) */
 .card_svgs p {
   margin-left: 0.5rem;
   display: inline-block;
 }
 
+.sub_desc {
+  margin-top: 2rem;
+}

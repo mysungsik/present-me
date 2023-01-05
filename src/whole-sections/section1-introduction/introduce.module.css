@@ -1,17 +1,27 @@
+/* 전체 div */
 .maindiv {
+  margin-top: 13rem;
+  padding-bottom: 5rem;
   width: 100%;
-  height: 40rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 2rem;
 }
 
+/* 타이틀  */
+.introduce_title {
+  margin-bottom: 2rem;
+}
+/* 이름 강조 */
 .my_name {
   font-size: 3rem;
   color: rgb(103, 90, 241);
   text-shadow: 2px 2px 3px rgba(93, 90, 255, 0.461);
+}
+/* 서브타이틀 (리액트와 Next.js ...) */
+.introduce_subtitle {
+  margin-bottom: 2rem;
 }
 
 .introduce {

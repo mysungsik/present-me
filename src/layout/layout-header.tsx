@@ -4,12 +4,14 @@ const LayoutHeader = () => {
   return (
     <div className={styles.main_header}>
       <div className={styles.logo}>
-        <h1> Logo </h1>
+        <img src={"/images/introduce/icons8-m-100.png"} />
       </div>
       <ul>
         <li>
-          <button type="button" className="btn btn-outline-primary">
-            <a href="mailto:audtlr93@naver.com">Contact Me</a>
+          <button className={styles.button}>
+            <a href="mailto:audtlr93@naver.com" className={styles.contact}>
+              Contact Me
+            </a>
           </button>
         </li>
       </ul>

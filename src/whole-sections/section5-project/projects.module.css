@@ -13,15 +13,16 @@
   padding: 0;
 }
 .projectList li {
-  margin: 2rem;
+  margin: 0 4rem;
   border-radius: 20px;
   box-shadow: 3px 3px 10px black;
 }
 
-.image {
+/* 프로젝트 이미지 div 의 이미지 */
+.project_img_div img {
   z-index: 1;
-  width: 20rem;
-  height: 15rem;
+  width: 25rem;
+  height: 20rem;
   border-radius: 20px;
   transition: all 600ms ease-in-out;
 }
@@ -31,6 +32,8 @@
   z-index: 0;
 }
 
+/* 프로젝트 이미지에 담길 텍스트 */
+/* 이미지의 크기와 서로 맞추고, 마진을 변경시킨다 */
 .projectText {
   position: relative;
   display: flex;
@@ -39,17 +42,21 @@
   background-color: rgba(0, 0, 0, 0.723);
   color: white;
   z-index: 1;
-  width: 20rem;
-  height: 15rem;
+  width: 25rem;
+  height: 20rem;
   border-radius: 20px;
-  margin-top: -15rem;
+  margin-top: -20rem;
   transition: all 500ms ease-in-out;
   opacity: 0;
   overflow: hidden;
 }
 
 .projectText button {
-  width: 10rem;
+  width: 12rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.588);
   margin: 0 auto;
 }
 .projectText:hover {
