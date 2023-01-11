@@ -84,7 +84,7 @@ const ProjectDes1 = () => {
       <hr />
       <div className={styles.deploy}>
         <p className={styles.sub_title}>&#127902;배포</p>
-        <p>https://react-do-health-project-f28kyvvol-mysungsik.vercel.app/</p>
+        <p>https://react-do-health-project-9tpmba9l9-mysungsik.vercel.app/</p>
         <p> https://github.com/mysungsik/react_Do-Health_Project </p>
       </div>
     </div>
