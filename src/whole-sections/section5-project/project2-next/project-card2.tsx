@@ -12,8 +12,9 @@ const Project2: React.FC<{ popupProject: () => void; state: string }> = (
   const stylesName = `${styles.image_div} ${styles[state]}`;
 
   return (
-    <div className={styles.main_div} onClick={popupProject}>
-      <div className={stylesName} onClick={popupProject}>
+    <div className={styles.main_div}>
+      <button onClick={popupProject}>Close</button>
+      <div className={stylesName}>
         <Swiper
           spaceBetween={1}
           slidesPerView={1}

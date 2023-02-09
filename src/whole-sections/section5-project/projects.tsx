@@ -1,12 +1,14 @@
 import styles from "./projects.module.css";
 import Project1 from "./project1-react/project-card1";
 import Project2 from "./project2-next/project-card2";
+import Project3 from "./project3-dogs/project-card3";
 import { Transition } from "react-transition-group";
 import { useState } from "react";
 
 const Projects = () => {
   const [project1, setProject1] = useState<boolean>(false);
   const [project2, setProject2] = useState<boolean>(false);
+  const [project3, setProject3] = useState<boolean>(false);
 
   const popupProject1 = () => {
     setProject1((prev) => !prev);
@@ -14,11 +16,33 @@ const Projects = () => {
   const popupProject2 = () => {
     setProject2((prev) => !prev);
   };
+  const popupProject3 = () => {
+    setProject3((prev) => !prev);
+  };
 
   return (
     <div className={styles.maindiv}>
       <h1> 나의 프로젝트 </h1>
       <ul className={styles.projectList}>
+        <li>
+          <div className={styles.project_img_div}>
+            <img
+              src={"/images/project3/4.JPG"}
+              alt={"project3"}
+              className={styles.image}
+            />
+          </div>
+          <div className={styles.projectText}>
+            <h2> 심리와 강아지 프로젝트 </h2>
+            <p> 인성검사를 통해 스스로를 파악 </p>
+            <p> 내부로직에 따라 적절한 반려견 추천, </p>
+            <p> 자신의 결과를 그래프로 판단.</p>
+            <button onClick={popupProject3}>자세히 보기</button>
+          </div>
+          <Transition in={project3} timeout={300} unmountOnExit mountOnEnter>
+            {(state) => <Project3 state={state} popupProject={popupProject3} />}
+          </Transition>
+        </li>
         <li>
           <div className={styles.project_img_div}>
             <img

@@ -1,10 +1,10 @@
 import styles from "../project-card.module.css";
-import ProjectDes1 from "./project-card1-des";
+import ProjectDes3 from "./project-card3-des";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-const Project1: React.FC<{ popupProject: () => void; state: string }> = (
+const Project3: React.FC<{ popupProject: () => void; state: string }> = (
   props
 ) => {
   const { popupProject, state } = props;
@@ -22,46 +22,37 @@ const Project1: React.FC<{ popupProject: () => void; state: string }> = (
           onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide>
-            <img src="/images/project1/1.PNG" alt={"main"} />
+            <img src="/images/project3/4.JPG" alt={"main"} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/images/project1/2.PNG" alt={"main"} />
+            <img src="/images/project3/5.JPG" alt={"main"} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/images/project1/3.PNG" alt={"main"} />
+            <img src="/images/project3/8.JPG" alt={"main"} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/images/project1/4.PNG" alt={"main"} />
+            <img src="/images/project3/9.JPG" alt={"main"} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/images/project1/5.PNG" alt={"main"} />
+            <img src="/images/project3/10.JPG" alt={"main"} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/images/project1/6.PNG" alt={"main"} />
+            <img src="/images/project3/6.JPG" alt={"main"} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/images/project1/7.PNG" alt={"main"} />
+            <img src="/images/project3/11.JPG" alt={"main"} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/images/project1/8.PNG" alt={"main"} />
+            <img src="/images/project3/12.JPG" alt={"main"} />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/images/project1/9.PNG" alt={"main"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/images/project1/10.PNG" alt={"main"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/images/project1/11.PNG" alt={"main"} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/images/project1/12.PNG" alt={"main"} />
+            <img src="/images/project3/13.JPG" alt={"main"} />
           </SwiperSlide>
         </Swiper>
       </div>
-      <ProjectDes1 />
+      <ProjectDes3 />
     </div>
   );
 };
 
-export default Project1;
+export default Project3;

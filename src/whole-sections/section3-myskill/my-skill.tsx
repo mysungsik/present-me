@@ -10,6 +10,7 @@ import react from "../../skills-svg/react.svg";
 import redux from "../../skills-svg/redux.svg";
 import typescript from "../../skills-svg/typescript.svg";
 import firebase from "../../skills-svg/firebase.svg";
+import sass from "../../skills-svg/sass.svg";
 import SkillDescription from "./skill-description";
 import { useState } from "react";
 import { Transition } from "react-transition-group";
@@ -25,6 +26,7 @@ const MySkill = () => {
   const [mongoState, setMongoState] = useState<boolean>(false);
   const [fireState, setFireState] = useState<boolean>(false);
   const [nodeState, setNodeState] = useState<boolean>(false);
+  const [sassState, setSassState] = useState<boolean>(false);
 
   const toggleJavaState = () => {
     setJavaState((prev) => !prev);
@@ -57,6 +59,9 @@ const MySkill = () => {
   const toggleNodeState = () => {
     setNodeState((prev) => !prev);
   };
+  const toggleSassState = () => {
+    setSassState((prev) => !prev);
+  };
 
   return (
     <div className={styles.maindiv}>
@@ -81,7 +86,7 @@ const MySkill = () => {
                   <SkillDescription
                     desc={[
                       { text: "활용도 8/10" },
-                      { text: "적절히 활용하는 정도" },
+                      { text: "완벽하진 않지만 활용에 익숙합니다." },
                     ]}
                     state={state}
                     toggleState={toggleJavaState}
@@ -104,7 +109,11 @@ const MySkill = () => {
                   <SkillDescription
                     desc={[
                       { text: "활용도 10/10" },
-                      { text: "아는 것 중 제일 익숙함" },
+                      { text: "함수형 컴포넌트 사용에 익숙합니다." },
+                      { text: "기본적인 HOOK 부터 최적화에 필요한 " },
+                      {
+                        text: "useMemo, useCallback 훅 등을 적절히 사용합니다.",
+                      },
                     ]}
                     state={state}
                     toggleState={toggleReactState}
@@ -126,8 +135,10 @@ const MySkill = () => {
                 {(state) => (
                   <SkillDescription
                     desc={[
-                      { text: "활용도 5/10" },
-                      { text: "하나하나 찾아보면서 하는 정도" },
+                      { text: "활용도 8/10" },
+                      {
+                        text: "Redux와 Nextjs, React에 전부 적용해보았습니다.",
+                      },
                     ]}
                     state={state}
                     toggleState={toggleTypeState}
@@ -149,8 +160,9 @@ const MySkill = () => {
                 {(state) => (
                   <SkillDescription
                     desc={[
-                      { text: "활용도 6/10" },
-                      { text: "DOCS 를 찾아보며, 만들어보았다" },
+                      { text: "활용도 8/10" },
+                      { text: "SSR의 구동방식을 이해하고 작업했습니다." },
+                      { text: "SSG의 방식을 이해하고 작업할 수 있습니다." },
                     ]}
                     state={state}
                     toggleState={toggleNextState}
@@ -172,9 +184,9 @@ const MySkill = () => {
                 {(state) => (
                   <SkillDescription
                     desc={[
-                      { text: "활용도 7/10" },
+                      { text: "활용도 8/10" },
                       { text: "Slice 와 Action(Thunk) 사용" },
-                      { text: "TypeScript 와 함께 사용해 봄" },
+                      { text: "TypeScript 와 함께 사용해 보았습니다" },
                     ]}
                     state={state}
                     toggleState={toggleReduxState}
@@ -196,8 +208,8 @@ const MySkill = () => {
                 {(state) => (
                   <SkillDescription
                     desc={[
-                      { text: "활용도 2/10" },
-                      { text: "설치후, 필요한 모듈만 빼서 사용해봄" },
+                      { text: "활용도 4/10" },
+                      { text: "설치후, 필요한 모듈만 빼서 사용해보았습니다" },
                     ]}
                     state={state}
                     toggleState={toggleBootState}
@@ -208,7 +220,7 @@ const MySkill = () => {
           </div>
         </div>
         <div className={styles.card}>
-          <h3> 협업 툴 </h3>
+          <h3> 협업 및 기타</h3>
           <hr />
           <div className={styles.card_svgs}>
             <div>
@@ -229,9 +241,42 @@ const MySkill = () => {
                 {(state) => (
                   <SkillDescription
                     desc={[
-                      { text: "활용도 4/10" },
-                      { text: "기본적인 push와 pull 의 활용 " },
-                      { text: "pull Request 와 merge 를 사용" },
+                      { text: "활용도 6/10" },
+                      {
+                        text: "기본적인 push와 pull, fork 등의 사용이 가능합니다",
+                      },
+                      { text: "pull Request 와 merge 를 사용가능합니다." },
+                    ]}
+                    state={state}
+                    toggleState={toggleGitHubState}
+                  />
+                )}
+              </Transition>
+            </div>
+            <div onClick={toggleSassState}>
+              {/* SASS */}
+              <img src={sass} alt={"sass"} />
+              <p>SASS</p>
+              <Transition
+                in={sassState}
+                timeout={{
+                  enter: 50,
+                  exit: 300,
+                }}
+              >
+                {(state) => (
+                  <SkillDescription
+                    desc={[
+                      { text: "활용도 7/10" },
+                      {
+                        text: "SCSS 문법을 사용합니다.",
+                      },
+                      {
+                        text: "@use, @include, 중첩과 @if, @for 등의 조건문을 사용합니다.",
+                      },
+                      {
+                        text: "& 를 사용한 결합과 CSS 결합자를 적절히 활용합니다. ",
+                      },
                     ]}
                     state={state}
                     toggleState={toggleGitHubState}
@@ -260,8 +305,10 @@ const MySkill = () => {
                   <SkillDescription
                     desc={[
                       { text: "활용도 9/10" },
-                      { text: "CURD 의 사용" },
-                      { text: "기타 조건문들의 사용" },
+                      { text: "기본적인 CURD 의 사용이 가능합니다." },
+                      {
+                        text: " $regex , $or 드의 기타 조건문들을 사용합니다.",
+                      },
                       { text: "현재 가장 잘 사용하는 DB" },
                     ]}
                     state={state}
@@ -284,9 +331,9 @@ const MySkill = () => {
                 {(state) => (
                   <SkillDescription
                     desc={[
-                      { text: "활용도 5/10" },
-                      { text: "CURD 의 사용" },
-                      { text: "FireBase-Auth 의 사용" },
+                      { text: "활용도 6/10" },
+                      { text: "기본적인 CURD 의 사용이 가능합니다" },
+                      { text: "FireBase-Auth 를 사용해보았습니다" },
                     ]}
                     state={state}
                     toggleState={toggleFireState}
@@ -308,8 +355,8 @@ const MySkill = () => {
                 {(state) => (
                   <SkillDescription
                     desc={[
-                      { text: "활용도 1/10" },
-                      { text: "그냥 한번 따라해봤다 정도..." },
+                      { text: "활용도 4/10" },
+                      { text: "자체적인 API 서버를 구축해보았습니다." },
                     ]}
                     state={state}
                     toggleState={toggleNodeState}
