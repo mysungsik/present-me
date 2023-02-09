@@ -78,7 +78,7 @@ const ProjectDes3 = () => {
       <hr />
       <div className={styles.deploy}>
         <p className={styles.sub_title}>&#127902;배포</p>
-        <p> https://nextjs-personal-project-3eopxie9h-mysungsik.vercel.app/</p>
+        <p> https://personality-and-dogs.vercel.app/</p>
         <p> https://github.com/mysungsik/personality-and-dogs </p>
       </div>
     </div>
