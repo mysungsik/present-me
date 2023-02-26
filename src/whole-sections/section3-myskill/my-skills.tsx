@@ -11,21 +11,36 @@ const MySkill = () => {
           <h3> 프론트엔드 </h3>
           <hr />
           {skillFronted.map((item) => (
-            <SkillItem image={item.image} alt={item.alt} desc={item.desc} />
+            <SkillItem
+              key={item.image}
+              image={item.image}
+              alt={item.alt}
+              desc={item.desc}
+            />
           ))}
         </div>
         <div className={styles.card}>
           <h3> 협업 및 기타</h3>
           <hr />
           {skillCooperation.map((item) => (
-            <SkillItem image={item.image} alt={item.alt} desc={item.desc} />
+            <SkillItem
+              key={item.image}
+              image={item.image}
+              alt={item.alt}
+              desc={item.desc}
+            />
           ))}
         </div>
         <div className={styles.card}>
           <h3> 백엔드 </h3>
           <hr />
           {skillBackend.map((item) => (
-            <SkillItem image={item.image} alt={item.alt} desc={item.desc} />
+            <SkillItem
+              key={item.image}
+              image={item.image}
+              alt={item.alt}
+              desc={item.desc}
+            />
           ))}
         </div>
       </div>
