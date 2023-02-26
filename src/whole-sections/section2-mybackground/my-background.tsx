@@ -26,7 +26,7 @@ const MyBackgorund = () => {
         </p>
       </div>
       <div className={styles.part_two}>
-        <h2>스스로 공부하는 개발자입니다.</h2>
+        <h2>저는 이렇게 공부해왔습니다.</h2>
         <p>
           Udemy의 강의와, YouTube, 책과, Official DOCS 를 보고 스스로
           공부했습니다.
