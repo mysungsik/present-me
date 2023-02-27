@@ -1,10 +1,16 @@
-import styles from "./project-card1-des.module.css";
+import styles from "../project-card-des.module.css";
 
 const ProjectDes1 = () => {
   return (
     <div className={styles.desc_div}>
       <div className={styles.title}>
         <p>&#128170; Do-Health 페이지</p>
+        <p style={{ fontSize: "1.2rem", fontWeight: 600 }}>
+          저장소 :
+          <a href="https://github.com/mysungsik/react_Do-Health_Project">
+            https://github.com/mysungsik/react_Do-Health_Project
+          </a>
+        </p>
       </div>
       <hr />
       <div className={styles.stack}>
@@ -84,8 +90,9 @@ const ProjectDes1 = () => {
       <hr />
       <div className={styles.deploy}>
         <p className={styles.sub_title}>&#127902;배포</p>
-        <p>https://react-do-health-project-9tpmba9l9-mysungsik.vercel.app/</p>
-        <p> https://github.com/mysungsik/react_Do-Health_Project </p>
+        <a href="https://react-do-health-project.vercel.app/">
+          https://react-do-health-project.vercel.app/
+        </a>
       </div>
     </div>
   );

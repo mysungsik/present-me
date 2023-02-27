@@ -1,10 +1,16 @@
-import styles from "./project-card3-des.module.css";
+import styles from "../project-card-des.module.css";
 
 const ProjectDes3 = () => {
   return (
     <div className={styles.desc_div}>
       <div className={styles.title}>
         <p>&#127828; 심리와 강아지 프로젝트</p>
+        <p style={{ fontSize: "1.2rem", fontWeight: 600 }}>
+          저장소 :
+          <a href="https://github.com/mysungsik/personality-and-dogs">
+            https://github.com/mysungsik/personality-and-dogs
+          </a>
+        </p>
       </div>
       <hr />
       <div className={styles.stack}>
@@ -78,8 +84,9 @@ const ProjectDes3 = () => {
       <hr />
       <div className={styles.deploy}>
         <p className={styles.sub_title}>&#127902;배포</p>
-        <p> https://personality-and-dogs.vercel.app/</p>
-        <p> https://github.com/mysungsik/personality-and-dogs </p>
+        <a href="https://personality-and-dogs.vercel.app/">
+          https://personality-and-dogs.vercel.app/
+        </a>
       </div>
     </div>
   );

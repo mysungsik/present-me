@@ -1,10 +1,16 @@
-import styles from "./project-card2-des.module.css";
+import styles from "../project-card-des.module.css";
 
 const ProjectDes2 = () => {
   return (
     <div className={styles.desc_div}>
       <div className={styles.title}>
         <p>&#127828; 오늘 뭐먹지 페이지</p>
+        <p style={{ fontSize: "1.2rem", fontWeight: 600 }}>
+          저장소 :
+          <a href="https://github.com/mysungsik/nextjs_what_should_eat-project">
+            https://github.com/mysungsik/nextjs_what_should_eat-project
+          </a>
+        </p>
       </div>
       <hr />
       <div className={styles.stack}>
@@ -63,8 +69,9 @@ const ProjectDes2 = () => {
       <hr />
       <div className={styles.deploy}>
         <p className={styles.sub_title}>&#127902;배포</p>
-        <p> https://nextjs-personal-project-3eopxie9h-mysungsik.vercel.app/</p>
-        <p> https://github.com/mysungsik/nextjs_what_should_eat-project </p>
+        <a href="https://nextjs-personal-project-inky.vercel.app/">
+          https://nextjs-personal-project-inky.vercel.app/
+        </a>
       </div>
     </div>
   );
