@@ -2,7 +2,9 @@ import styles from "../project-card.module.css";
 import ProjectDes3 from "./project-card3-des";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
 import "swiper/css";
+import "swiper/css/pagination";
 
 const Project3: React.FC<{ popupProject: () => void; state: string }> = (
   props
@@ -15,12 +17,7 @@ const Project3: React.FC<{ popupProject: () => void; state: string }> = (
     <div className={styles.main_div}>
       <button onClick={popupProject}>Close</button>
       <div className={stylesName}>
-        <Swiper
-          spaceBetween={1}
-          slidesPerView={1}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
+        <Swiper pagination={true} modules={[Pagination]}>
           <SwiperSlide>
             <img src="/images/project3/4.JPG" alt={"main"} />
           </SwiperSlide>
