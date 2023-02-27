@@ -22,9 +22,10 @@ const Projects = () => {
 
   return (
     <div className={styles.maindiv}>
-      <h1> 나의 프로젝트 </h1>
+      <h1> &#128253; 나의 프로젝트 </h1>
       <ul className={styles.projectList}>
         <li>
+          <p>2023.01.29 ~ 2023.02.09 [최신]</p>
           <div className={styles.project_img_div}>
             <img
               src={"/images/project3/4.JPG"}
@@ -44,6 +45,7 @@ const Projects = () => {
           </Transition>
         </li>
         <li>
+          <p>2022.12.24 ~ 2023.01.04</p>
           <div className={styles.project_img_div}>
             <img
               src={"/images/project1/1.PNG"}
@@ -63,6 +65,7 @@ const Projects = () => {
           </Transition>
         </li>
         <li>
+          <p>2022.11.16 ~ 2022.12.04</p>
           <div className={styles.project_img_div}>
             <img
               src={"/images/project2/1.JPG"}

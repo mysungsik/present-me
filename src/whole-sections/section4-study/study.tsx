@@ -3,9 +3,14 @@ import styles from "./study.module.css";
 const Studies = () => {
   return (
     <div className={styles.maindiv}>
-      <h1> 주요 수강 강의 , 서적 </h1>
+      <h1> &#128214; 대외활동, 주요 수강 강의, 서적 </h1>
 
       <div className={styles.study_detail}>
+        <hr />
+        <div>
+          <p>원티드 프리온보딩 프론트엔드 인턴십 -9차 [진행중]</p>
+          <p className={styles.writer}> 원티드</p>
+        </div>
         <hr />
         <div>
           <p>100일 코딩 챌린지 - Web Development 부트캠프 강사 [79.5시간]</p>

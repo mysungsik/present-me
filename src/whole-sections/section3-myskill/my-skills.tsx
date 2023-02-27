@@ -5,7 +5,7 @@ import { skillFronted, skillCooperation, skillBackend } from "./skill-data";
 const MySkill = () => {
   return (
     <div className={styles.maindiv}>
-      <h1>보유한 능력들</h1>
+      <h1> &#127775; 보유한 능력들</h1>
       <div className={styles.cards}>
         <div className={styles.card}>
           <h3> 프론트엔드 </h3>
